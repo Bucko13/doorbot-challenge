@@ -26,7 +26,16 @@ module.exports = {
 				test:  /\.js$/,
 				loader: "babel",
 				exclude: /node_modules/,
-				query: { presets: ['es2015'] }
+				query: {
+          presets: [
+            'es2015',
+            'es2016',
+            'react'
+          ],
+          plugins: [
+            'transform-class-properties',
+          ]
+        }
 			},
 		],
 		preLoaders: [

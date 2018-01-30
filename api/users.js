@@ -17,6 +17,7 @@ module.exports = function(app) {
 }
 
 async function auth(request, response) {
+  console.log('AUTH BODY', request.body)
 	if (!request.body.username || !request.body.password) {
 		response.writeHead(400);
 		response.write("username and password are required.");
