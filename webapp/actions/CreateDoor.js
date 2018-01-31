@@ -1,7 +1,7 @@
 import AppState from '../AppState'
 import request from '../request'
 
-export default function LoadDoors({name}){
+export default function CreateDoor({name}){
   return request.post('/api/doors', {name}).then(
     door => {
       if (!AppState.value.doors)

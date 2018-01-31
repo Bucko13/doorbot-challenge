@@ -14,6 +14,9 @@ import LoginPage         from './pages/LoginPage'
 import DoorsPage         from './pages/DoorsPage'
 import NewDoorPage       from './pages/NewDoorPage'
 import DoorShowPage      from './pages/DoorShowPage'
+import UsersPage         from './pages/UsersPage'
+import NewUserPage       from './pages/NewUserPage'
+import UserShowPage      from './pages/UserShowPage'
 import NotFoundPage      from './pages/NotFoundPage'
 
 export default function Router({appState}){
@@ -38,14 +41,18 @@ export default function Router({appState}){
       <Route exact path="/logout" component={LogoutPage} />
       <Route exact path="/doors" component={DoorsPage} />
       <Route exact path="/doors/new" component={NewDoorPage} />
-      <Route exact path="/doors/:id" component={DoorShowPageWrapper} />
+      <Route exact path="/doors/:id" component={NotNew(DoorShowPage)} />
+      <Route exact path="/users" component={UsersPage} />
+      <Route exact path="/users/new" component={NewUserPage} />
+      <Route exact path="/users/:id" component={NotNew(UserShowPage)} />
     </Layout>
   </BrowserRouter>
 }
 
 // React Router is Wack
-const DoorShowPageWrapper = (props) =>
-  props.match.params.id === 'new'
-    ? null
-    : <DoorShowPage {...props} />
+const NotNew = (Component) =>
+  (props) =>
+    props.match.params.id === 'new'
+      ? null
+      : <Component {...props} />
 
