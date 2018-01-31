@@ -11,7 +11,7 @@ export default function LoadDoor(doorId){
         AppState.set()
       },
       response => {
-        AppState.addError('failed to load doors')
+        AppState.addError('failed to load door')
       }
     )
 }
