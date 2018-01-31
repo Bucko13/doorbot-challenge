@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'react-router-dom'
 import LoadDoor from '../actions/LoadDoor'
 import DeleteDoor from '../actions/DeleteDoor'
+import OpenDoor from '../actions/OpenDoor'
 
 export default class DoorShowPage extends React.Component {
 
@@ -13,6 +14,7 @@ export default class DoorShowPage extends React.Component {
   constructor(){
     super()
     this.deleteDoor = this.deleteDoor.bind(this)
+    this.openDoor = this.openDoor.bind(this)
   }
 
   componentDidMount(){
@@ -40,6 +42,11 @@ export default class DoorShowPage extends React.Component {
     }
   }
 
+  openDoor(event){
+    event.preventDefault()
+    OpenDoor(this.doorId())
+  }
+
   render(){
     const door = this.door()
     const doorId = door ? door.id : this.doorId()
@@ -54,6 +61,9 @@ export default class DoorShowPage extends React.Component {
             </li>
             <li>
               <Link to={`/doors/${doorId}/edit`}>Edit</Link>
+            </li>
+            <li>
+              <a href="" onClick={this.openDoor}>Open</a>
             </li>
           </ul>
         </div>
