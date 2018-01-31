@@ -18,7 +18,9 @@ export default class DoorShowPage extends React.Component {
   }
 
   componentDidMount(){
-    LoadDoor(this.doorId())
+    // console.log('DoorShowPage Mount calling LoadDoor')
+    const door = this.door()
+    if (!door) LoadDoor(this.doorId())
   }
 
   doorId(){

@@ -2,6 +2,7 @@ import AppState from '../AppState'
 import request from '../request'
 
 export default function LoadDoor(doorId){
+  console.log('LOADING DOOR', doorId)
   return request.get(`/api/doors/${doorId}`)
     .then(
       door => {
