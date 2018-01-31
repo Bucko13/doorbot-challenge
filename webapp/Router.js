@@ -10,7 +10,6 @@ import Layout from './components/Layout'
 import LoggedOutHomePage from './pages/LoggedOutHomePage'
 import LogoutPage        from './pages/LogoutPage'
 import LoggedInHomePage  from './pages/LoggedInHomePage'
-import SignupPage        from './pages/SignupPage'
 import LoginPage         from './pages/LoginPage'
 import DoorsPage         from './pages/DoorsPage'
 import NewDoorPage       from './pages/NewDoorPage'
@@ -25,7 +24,6 @@ export default function Router({appState}){
       <Layout>
         <Route exact path="/" component={LoggedOutHomePage}/>
         <Route exact path="/login" component={LoginPage}/>
-        <Route exact path="/signup" component={SignupPage}/>
         <Route exact path="/logout" render={()=><Redirect to="/" />}/>
       </Layout>
     </BrowserRouter>
