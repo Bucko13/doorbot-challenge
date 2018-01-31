@@ -6,17 +6,18 @@ const error = require('../lib/errors');
 const helpers = require('../lib/helpers');
 
 module.exports = function(app) {
-	app.  post("/auth", auth);
-	app.delete("/auth", logout);
-	app.   get("/users", index);
-	app.  post("/users", create);
-	app.   get("/users/:username", read);
-	app. patch("/users/:username", update);
-	app.delete("/users/:username", del_user);
-	app.   get("/users/:username/logs", logs);
+	app.  post("/api/auth", auth);
+	app.delete("/api/auth", logout);
+	app.   get("/api/users", index);
+	app.  post("/api/users", create);
+	app.   get("/api/users/:username", read);
+	app. patch("/api/users/:username", update);
+	app.delete("/api/users/:username", del_user);
+	app.   get("/api/users/:username/logs", logs);
 }
 
 async function auth(request, response) {
+  console.log('AUTH BODY', request.body)
 	if (!request.body.username || !request.body.password) {
 		response.writeHead(400);
 		response.write("username and password are required.");

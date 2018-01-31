@@ -45,7 +45,12 @@ app.use(express.static('dist'));
 // Load all controllers from the api directory.
 var controllers = path.join(__dirname, 'api');
 fs.readdirSync(controllers).forEach(function(file) {
-	require(path.join(controllers, file))(app);
+  require(path.join(controllers, file))(app);
+});
+
+// serving app html at all other urls
+app.get('*', function (req, res) {
+  res.sendFile(path.resolve(__dirname, './dist/index.html'));
 });
 
 //TODO: handle errors
