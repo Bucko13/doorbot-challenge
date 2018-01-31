@@ -41,15 +41,44 @@ function Errors({errors}){
 
 function LayoutNav({currentUser}){
   const content = !currentUser
-    ? <div>
-        <Link to="/signup">Singup</Link>
-        <Link to="/login">Login</Link>
+    // logged out navbar
+    ? <div className="navbar-collapse collapse">
+        <ul className="nav navbar-nav">
+        </ul>
+        <ul className="nav navbar-nav navbar-right">
+          <li role="presentation">
+            <Link to="/signup">Singup</Link>
+          </li>
+          <li role="presentation">
+            <Link to="/login">Login</Link>
+          </li>
+        </ul>
       </div>
-    : <div>
-        <span>{currentUser.username}</span>
-        <Link to="/doors">Doors</Link>
-        <Link to="/logout">Logout</Link>
+
+    // logged in navbar
+    : <div className="navbar-collapse collapse">
+        <ul className="nav navbar-nav">
+          <li role="presentation">
+            <Link to="/doors">Doors</Link>
+          </li>
+          {
+            currentUser.admin
+              ? <li role="presentation">
+                  <Link to="/users">Users</Link>
+                </li>
+              : null
+          }
+        </ul>
+        <ul className="nav navbar-nav navbar-right">
+          <li role="presentation">
+            <Link to={`/users/${currentUser.username}`}>{currentUser.username}</Link>
+          </li>
+          <li role="presentation">
+            <Link to="/logout">Logout</Link>
+          </li>
+        </ul>
       </div>
+
   return <Navbar>
     <Navbar.Header>
       <Navbar.Brand>

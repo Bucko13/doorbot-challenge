@@ -6,6 +6,8 @@ AppState.value = 'appstate' in localStorage
   ? JSON.parse(localStorage['appstate'])
   : {}
 
+console.log('AppState', AppState.value)
+
 AppState.clear = function(){
   AppState.value = {}
   AppState.emit('change')
