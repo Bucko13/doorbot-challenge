@@ -9,16 +9,16 @@ const DOOR_SOCKETS = {};
 
 module.exports = function(app) {
 	var wsApp = expressWs(app);
-	app.   get("/doors", index);
-	app.  post("/doors", create);
-	app.   get("/doors/:id", read);
-	app. patch("/doors/:id", update);
-	app.delete("/doors/:id", del_door);
-	app.   get("/doors/:id/logs", logs);
-	app.  post("/doors/:id/open", open);
-	app.    ws("/doors/:id/connect", connect);
-	app.  post("/doors/:id/permit/:username", permit);
-	app.delete("/doors/:id/permit/:username", deny);
+	app.   get("/api/doors", index);
+	app.  post("/api/doors", create);
+	app.   get("/api/doors/:id", read);
+	app. patch("/api/doors/:id", update);
+	app.delete("/api/doors/:id", del_door);
+	app.   get("/api/doors/:id/logs", logs);
+	app.  post("/api/doors/:id/open", open);
+	app.    ws("/api/doors/:id/connect", connect);
+	app.  post("/api/doors/:id/permit/:username", permit);
+	app.delete("/api/doors/:id/permit/:username", deny);
 }
 
 async function index(request, response) {

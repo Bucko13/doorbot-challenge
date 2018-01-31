@@ -49,7 +49,7 @@ fs.readdirSync(controllers).forEach(function(file) {
 });
 
 // serving app html at all other urls
-app.get('/*', function (req, res) {
+app.get('*', function (req, res) {
   res.sendFile(path.resolve(__dirname, './dist/index.html'));
 });
 

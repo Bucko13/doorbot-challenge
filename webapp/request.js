@@ -9,14 +9,20 @@ const request = (method, path, payload) => {
   })
 }
 
-request.getJSON = (path, params={}) => {
+request.get = (path, params={}) => {
   return request('GET', path)
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) return response.json()
+      throw response
+    })
 }
 
-request.postJSON = (path, payload) => {
+request.post = (path, payload) => {
   return request('POST', path, payload)
-    .then(response => response.json())
+    .then(response => {
+      if (response.ok) return response.json()
+      throw response
+    })
 }
 
 request.delete = (path) => {

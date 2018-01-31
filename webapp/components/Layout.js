@@ -6,7 +6,8 @@ import {
   NavItem,
   NavDropdown,
   MenuItem,
-  Nav
+  Nav,
+  Alert,
 } from 'react-bootstrap'
 
 export default class Layout extends React.Component {
@@ -16,15 +17,27 @@ export default class Layout extends React.Component {
   }
 
   render(){
-    const { currentUser } = this.context.appState
+    const { errors, currentUser } = this.context.appState
 
     return <div className="Layout">
       <LayoutNav currentUser={currentUser} />
+      <Errors errors={errors || []} />
       <div>{this.props.children}</div>
     </div>
   }
 }
 
+
+function Errors({errors}){
+  const alerts = errors.map(error =>
+    <Alert key={error.id} bsStyle="danger">
+      {error.message}
+    </Alert>
+  )
+  return <div className="Errors">
+    {alerts}
+  </div>
+}
 
 function LayoutNav({currentUser}){
   const content = !currentUser

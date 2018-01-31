@@ -4,8 +4,6 @@ import Login from '../actions/Login'
 export default class LoginPage extends React.Component {
   render(){
     return <div>
-
-
       <LoginForm />
     </div>
   }
