@@ -2,7 +2,7 @@ var webpack = require('webpack');
 
 module.exports = {
 	context: __dirname,
-	entry: "app/main.js",
+	entry: "app/main.jsx",
 	output: {
 		path: __dirname + "/dist",
 		libraryTarget: 'var',
@@ -15,7 +15,7 @@ module.exports = {
 	plugins: [
 		new webpack.ProvidePlugin({
 			// These become available to all files.
-			//$: "jquery",
+			// $: "jquery",
 		}),
 	],
 	module: {
@@ -23,10 +23,10 @@ module.exports = {
 			{ test:  /\.json$/, loader: "hson" },
 			{ test:  /\.s?css$/, loaders: ["style", "css?sourceMap", "sass"] },
 			{ // ES6 support.
-				test:  /\.js$/,
+				test:  /\.jsx?$/,
 				loader: "babel",
 				exclude: /node_modules/,
-				query: { presets: ['es2015'] }
+				query: { presets: ['es2015', 'react'] }
 			},
 		],
 		preLoaders: [
