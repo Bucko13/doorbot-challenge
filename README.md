@@ -5,6 +5,38 @@ Uses a raspberrypi and a solid-state relay to unlock the door
 
 A node server running optionally elseware manages the users and serves the WebUI
 
+# API 
+## Authentication
+| HTTP method   | Endpoint      | Function  |
+| ------------- |:-------------:| -----:|
+| POST          | /auth | log user in |
+| DELETE        | /auth      |   log user out |
+
+## Users
+| HTTP method   | Endpoint              | Function                                      |
+| ------------- |:-------------:        | -----:                                        |
+| GET           | /users                | retrieve user list (must be admin)            |
+| POST          | /users                | create new user (requires username and admin) |
+| GET           | /users/:username      | returns user info                             |
+| PATCH         | /users/:username      | updates user                                  |
+| DELETE        | /users/:username      | deletes user                                  |
+| GET           | /users/:username/logs | returns user log info                         |
+
+## Doors
+| HTTP method   | Endpoint                    | Function                                    |
+| ------------- |:-------------:              | -----:                                      |
+| GET           | /doors                      | returns doors                               |
+| POST          | /doors                      | creates door                                |
+| GET           | /doors/:id                  | returns door info                           |
+| PATCH         | /doors/:id                  | update door (must be admin)                 |
+| DELETE        | /doors/:id                  | delete door (must be admin)                 |
+| GET           | /doors/:id/logs             | returns door logs                           |
+| POST          | /doors/:id/open             | permit/open door                            |
+| WS            | /doors/:id/connect          | create websocket for door                   |
+| POST          | /doors/:id/permit/:username | allow user door permission (must be admin)  |
+| DELETE        | /doors/:id/permit/:username | delete user door permission (must be admin) |
+
+
 # Setup
 ### Hardware
 You need is a RasberryPi and a Relay.
