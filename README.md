@@ -7,7 +7,7 @@ A node server running optionally elseware manages the users and serves the WebUI
 
 # Setup
 ### Hardware
-You need is a RasberryPi and a Relay.
+All you need is a RasberryPi and a Relay.
 [Install rasbian](https://www.raspberrypi.org/downloads/raspbian/)
 then plugin the relay.
 It's recomended to use a signal pin above 8, because they will default to Low,
