@@ -1,7 +1,7 @@
 version: '2'
 services:
   server:
-    image: doorbot-challenge
+    image: thann/doorbot
     build: .
     restart: unless-stopped
     ports:
