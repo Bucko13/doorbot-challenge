@@ -1,19 +1,27 @@
 import React, { Component } from 'react';
-import logo from './logo.svg';
-import './App.css';
+import { Route, Switch } from 'react-router-dom';
+import LoginContainer from './containers/LoginContainer';
+import ResetPasswordContainer from './containers/ResetPasswordContainer';
+import Doors from './containers/DoorsContainer';
+import { Container, Grid } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
     return (
-      <div className="App">
-        <header className="App-header">
-          <img src={logo} className="App-logo" alt="logo" />
-          <h1 className="App-title">Welcome to React</h1>
-        </header>
-        <p className="App-intro">
-          To get started, edit <code>src/App.js</code> and save to reload.
-        </p>
-      </div>
+      <Container>
+        <Grid stackable>
+          <Grid.Row>
+            <Grid.Column width={12}>
+              <Switch>
+                <Route path='/login' component={LoginContainer} />
+                <Route path='/resetPassword' component={ResetPasswordContainer} />
+                <Route path='/doors' component={Doors} />
+                <Route render={() => <LoginContainer />} />
+              </Switch>
+            </Grid.Column>
+          </Grid.Row>
+        </Grid>
+      </Container>
     );
   }
 }
