@@ -1,7 +1,7 @@
 version: '2'
 services:
   server:
-    image: thann/doorbot
+    image: doorbot-challenge
     build: .
     restart: unless-stopped
     ports:
@@ -9,12 +9,14 @@ services:
     volumes:
       - db:/usr/src/app/db
     # Handy for dev
-    #  - ./api:/usr/src/app/api
-    #  - ./webapp:/usr/src/app/webapp
-    #command: server --watch
+      - ./api:/usr/src/app/api
+      - ./webapp:/usr/src/app/webapp
+      - ./dist:/usr/src/app/dist
+    command: server --watch
 
   door:
-    image: thann/doorbot
+    image: doorbot-challenge
+    build: .
     #restart: unless-stopped
     privileged: true
     command: door --insecure --dummy -s server -t "abc123"
