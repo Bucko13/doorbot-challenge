@@ -10,10 +10,10 @@ class DoorsContainer extends React.Component {
   }
 }
 
-const mapStateToDoorProps = (state) => {
+const mapStateToProps = (state) => {
   return {
     list: state.doors.list
   }
 };
 
-export default connect(mapStateToDoorProps)(DoorsContainer);
+export default connect(mapStateToProps)(DoorsContainer);

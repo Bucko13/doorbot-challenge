@@ -1,4 +1,5 @@
 import { combineReducers } from 'redux';
+import user from './userReducers';
 
 const initialState = {
   list: [
@@ -12,7 +13,8 @@ const doors = (state = initialState, action) => {
 };
 
 const rootReducer = combineReducers({
-  doors
+  user,
+  doors,
 });
 
 export default rootReducer;
