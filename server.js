@@ -23,7 +23,7 @@ var getopts = require("node-getopt").create([
 	"\n" +
 	"[[OPTIONS]]\n" +
 	"\n" +
-	"Repository: https://github.com/Thann/Doorbot"
+	"Repository: https://github.com/bucko13/doorbot-challenge"
 );
 
 var opt = getopts.parseSystem();
