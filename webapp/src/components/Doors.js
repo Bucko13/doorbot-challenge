@@ -1,14 +1,32 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Grid, Button, Header, Segment } from 'semantic-ui-react'
+import { Icon, Dimmer, Grid, Button, Header, Segment } from 'semantic-ui-react'
 
-const Doors = ({ list }) => {
+const Doors = ({ list, onOpen }) => {
   const available_doors = list.map((door) => (
     <Grid.Column width={3} key={door.id}>
-      <Segment compact stacked textAlign='center'>
+      <Dimmer.Dimmable
+        as={Segment}
+        compact
+        stacked
+        blurring
+        dimmed={door.opened}
+        textAlign='center'>
+        <Dimmer active={door.opened} inverted>
+          <Header as='h3' icon>
+            <Icon name='unlock' />
+            Opened!
+          </Header>
+        </Dimmer>
         <Header as='h3'>{door.name}</Header>
-        <Button color='teal' size='tiny'>Open</Button>
-      </Segment>
+        <Button
+          onClick={() => onOpen(door)}
+          color='teal'
+          size='tiny'
+        >
+          Open
+          </Button>
+      </Dimmer.Dimmable>
     </Grid.Column>
   ));
 
@@ -27,6 +45,7 @@ const Doors = ({ list }) => {
 
 Doors.propTypes = {
   list: PropTypes.array.isRequired,
+  onOpen: PropTypes.func.isRequired,
 };
 
 export default Doors;
