@@ -4,12 +4,10 @@ import { straigthResponseData, straigthResponseError } from '../../helpers/axios
 const userAxios = axios.create();
 userAxios.interceptors.response.use(straigthResponseData, straigthResponseError);
 
-function login({ username, password }) {
-  return userAxios.post('/auth', { username, password });
+export function getCurrentUser() {
+  return userAxios.get('/users/me')
 }
 
-const userApi = {
-  login,
+export function login({ username, password }) {
+  return userAxios.post('/auth', { username, password })
 }
-
-export default userApi;

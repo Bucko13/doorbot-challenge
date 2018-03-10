@@ -5,12 +5,15 @@ import {
   LOGIN_FAILED,
   LOGOUT,
   LOGOUT_SUCCEEDED,
-  LOGOUT_FAILED } from '../actions';
+  LOGOUT_FAILED,
+  GET_CURRENT_USER_SUCCEEDED,
+  GET_CURRENT_USER_FAILED,
+} from '../actions';
 
 const initialState = {
   id: null,
   username: '',
-  isLoading: false,
+  isLoading: true,
   error: null,
   admin: false,
 };
@@ -18,26 +21,27 @@ const initialState = {
 export default function userReducers(state = initialState, action) {
 
   if (action.type === LOGIN) {
-    const { username, password } = action;
-    login({ username, password });
+    login({
+      username: action.username,
+      password: action.password
+    });
     return Object.assign({}, state, { isLoading: true });
   }
 
-  if (action.type === LOGIN_SUCCEEDED) {
-    const { user: { username, requires_reset, last_login, id } } = action;
-    return Object.assign({}, state, {
-      username,
-      requires_reset,
-      last_login,
-      id,
+  if (action.type === LOGIN_SUCCEEDED ||
+      action.type === GET_CURRENT_USER_SUCCEEDED) {
+    return  Object.assign({}, state, action.user, {
       isLoading: false,
       error: null,
     });
   }
 
   if (action.type === LOGIN_FAILED) {
-    const { error } = action;
-    return Object.assign({}, state, { error });
+    return Object.assign({}, state, { error: action.error });
+  }
+
+  if (action.type === GET_CURRENT_USER_FAILED) {
+    return Object.assign({}, state, initialState, { isLoading: false });
   }
 
   return state;
