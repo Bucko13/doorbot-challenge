@@ -2,6 +2,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../redux/actions/userActions';
+import { Loader } from 'semantic-ui-react';
 
 class LoadUser extends React.Component {
   static propTypes = {
@@ -17,7 +18,7 @@ class LoadUser extends React.Component {
     return (
       <div>
         { this.props.isLoading ?
-          <b>Loading...</b> :
+          <Loader active>Loading...</Loader> :
           this.props.children
         }
       </div>
