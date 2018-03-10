@@ -4,13 +4,13 @@ import LoginContainer from './containers/LoginContainer';
 import ResetPasswordContainer from './containers/ResetPasswordContainer';
 import DoorsContainer from './containers/DoorsContainer';
 import { ifLoggedIn } from './helpers/AccessControl';
-import Layout from './components/Layout';
+import LayoutContainer from './containers/LayoutContainer';
 import LoadUser from './containers/LoadUser';
 
 class App extends React.Component {
   render() {
     return (
-      <Layout>
+      <LayoutContainer>
         <LoadUser>
           <Switch>
             <Route path='/login' component={LoginContainer} />
@@ -19,7 +19,7 @@ class App extends React.Component {
             <Route render={() => <LoginContainer />} />
           </Switch>
         </LoadUser>
-      </Layout>
+      </LayoutContainer>
     );
   }
 }

@@ -1,5 +1,6 @@
 import {
   login as apiLogin,
+  logout as apiLogout,
   getCurrentUser as apiGetCurrentUser
 } from '../../services/api/userApi';
 
@@ -59,4 +60,24 @@ export function getCurrentUserFailed() {
   return {
     type: GET_CURRENT_USER_FAILED
   }
+}
+
+export function logout() {
+  return (dispatch) => {
+    apiLogout()
+      .then((data) => dispatch(logoutSucceeded()))
+      .catch((data) => dispatch(logoutFailed()));
+  }
+}
+
+function logoutSucceeded() {
+  return {
+    type: LOGOUT_SUCCEEDED
+  };
+}
+
+function logoutFailed() {
+  return {
+    type: LOGOUT_FAILED
+  };
 }

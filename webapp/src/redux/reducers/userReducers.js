@@ -12,10 +12,10 @@ import {
 
 const initialState = {
   id: null,
-  username: '',
+  username: null,
   isLoading: true,
   error: null,
-  admin: false,
+  admin: null,
 };
 
 export default function userReducers(state = initialState, action) {
@@ -40,7 +40,8 @@ export default function userReducers(state = initialState, action) {
     return Object.assign({}, state, { error: action.error });
   }
 
-  if (action.type === GET_CURRENT_USER_FAILED) {
+  if (action.type === LOGOUT_SUCCEEDED ||
+      action.type === GET_CURRENT_USER_FAILED) {
     return Object.assign({}, state, initialState, { isLoading: false });
   }
 
