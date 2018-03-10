@@ -53,7 +53,9 @@ async function auth(request, response) {
 			return response.end();
 		}
 	}
+	response.setHeader('content-type', 'application/json');
 	response.writeHead(401);
+	response.write(JSON.stringify({ error: "Username or password are incorrect"}));
 	return response.end();
 }
 
