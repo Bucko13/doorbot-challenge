@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import Login from '../components/Login'
 import { connect } from 'react-redux';
 import { login } from '../redux/actions/userActions';
@@ -10,6 +11,12 @@ class LoginContainer extends React.Component {
       username: '',
       password: ''
     }
+  }
+
+  static propTypes = {
+    user: PropTypes.shape({
+      error: PropTypes.string
+    })
   }
 
   handleChangeUser = (event) => {

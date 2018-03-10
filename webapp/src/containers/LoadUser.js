@@ -1,8 +1,14 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { getCurrentUser } from '../redux/actions/userActions';
 
 class LoadUser extends React.Component {
+  static propTypes = {
+    isLoading: PropTypes.bool.isRequired,
+    children: PropTypes.element.isRequired,
+  }
+
   componentDidMount() {
     this.props.getCurrentUser();
   }

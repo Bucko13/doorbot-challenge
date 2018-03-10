@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, Form, Header, Segment } from 'semantic-ui-react'
 
 const ResetPassword = ({ form, onChangePassword }) => {
@@ -15,10 +16,17 @@ const ResetPassword = ({ form, onChangePassword }) => {
             placeholder='Password'
           />
         </Form.Field>
-        <Button type='submit'>Set new password</Button>
+        <Button color='teal' type='submit'>Set new password</Button>
       </Form>
     </Segment>
   )
 }
+
+ResetPassword.propTypes = {
+  form: PropTypes.shape({
+    password: PropTypes.string
+  }),
+  onChangePassword: PropTypes.func.isRequired,
+};
 
 export default ResetPassword;

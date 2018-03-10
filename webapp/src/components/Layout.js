@@ -1,7 +1,8 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Menu, Container, Grid } from 'semantic-ui-react';
 
-export default function Layout({ onLogout, children, isLoggedIn }) {
+function Layout({ onLogout, children, isLoggedIn }) {
   return (
     <Container>
       <Grid stackable>
@@ -33,3 +34,11 @@ export default function Layout({ onLogout, children, isLoggedIn }) {
     </Container>
   );
 }
+
+Layout.propTypes = {
+  onLogout: PropTypes.func.isRequired,
+  isLoggedIn: PropTypes.bool.isRequired,
+  children: PropTypes.element.isRequired,
+};
+
+export default Layout;

@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Button, Form, Grid, Header, Message, Segment } from 'semantic-ui-react';
 
 const Login = ({ form, onChangeUser, onChangePassword, onSubmit, error }) => (
@@ -48,5 +49,15 @@ const Login = ({ form, onChangeUser, onChangePassword, onSubmit, error }) => (
 </Grid>
 );
 
+Login.propTypes = {
+  form: PropTypes.shape({
+    username: PropTypes.string,
+    password: PropTypes.string,
+  }),
+  onChangeUser: PropTypes.func.isRequired,
+  onChangePassword: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.string,
+};
 
 export default Login;

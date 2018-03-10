@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { logout } from '../redux/actions/userActions';
 import Layout from '../components/Layout';
@@ -10,6 +11,12 @@ function LayoutContainer({ isLoggedIn, onLogout, children }) {
     </Layout>
   );
 }
+
+LayoutContainer.propTypes = {
+  isLoggedIn: PropTypes.bool.isRequired,
+  onLogout: PropTypes.func.isRequired,
+  children: PropTypes.element.isRequired,
+};
 
 const mapStateProps = (state) => {
   return {

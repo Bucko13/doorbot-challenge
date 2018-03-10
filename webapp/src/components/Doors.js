@@ -1,4 +1,5 @@
 import React from 'react';
+import PropTypes from 'prop-types';
 import { Grid, Button, Header, Segment } from 'semantic-ui-react'
 
 const Doors = ({ list }) => {
@@ -23,5 +24,9 @@ const Doors = ({ list }) => {
     </Segment>
   )
 }
+
+Doors.propTypes = {
+  list: PropTypes.array.isRequired,
+};
 
 export default Doors;
