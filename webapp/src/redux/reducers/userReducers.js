@@ -12,6 +12,7 @@ const initialState = {
   username: '',
   isLoading: false,
   error: null,
+  admin: false,
 };
 
 export default function userReducers(state = initialState, action) {
@@ -24,7 +25,14 @@ export default function userReducers(state = initialState, action) {
 
   if (action.type === LOGIN_SUCCEEDED) {
     const { user: { username, requires_reset, last_login, id } } = action;
-    return Object.assign({}, state, { username, requires_reset, last_login, id, isLoading: false });
+    return Object.assign({}, state, {
+      username,
+      requires_reset,
+      last_login,
+      id,
+      isLoading: false,
+      error: null,
+    });
   }
 
   if (action.type === LOGIN_FAILED) {

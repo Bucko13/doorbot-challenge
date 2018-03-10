@@ -1,4 +1,4 @@
-import api from '../../helpers/api';
+import userApi from '../../services/api/userApi';
 
 import {
   LOGIN,
@@ -11,7 +11,7 @@ import {
 
 export function login({ username, password}) {
   return (dispatch) => {
-    api.login({username, password })
+    userApi.login({username, password })
       .then((data) => dispatch(loginSucceeded(data)))
       .catch((data) => {
         dispatch(loginFailed(data))

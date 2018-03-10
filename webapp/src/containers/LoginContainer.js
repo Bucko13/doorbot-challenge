@@ -2,6 +2,7 @@ import React from 'react';
 import Login from '../components/Login'
 import { connect } from 'react-redux';
 import { login } from '../redux/actions/userActions';
+import { Redirect } from 'react-router-dom';
 
 class LoginContainer extends React.Component {
   state = {
@@ -34,21 +35,29 @@ class LoginContainer extends React.Component {
   }
 
   render() {
+    const isLoggedIn = !!this.props.user.username;
+
     return (
-      <Login
-        form={this.state.form}
-        error={this.props.error}
-        onSubmit={this.handleSubmit}
-        onChangeUser={this.handleChangeUser}
-        onChangePassword={this.handleChangePassword}
-      />
+      <div>
+        {
+          isLoggedIn ?
+          <Redirect to='/doors' /> :
+          <Login
+            form={this.state.form}
+            error={this.props.user.error}
+            onSubmit={this.handleSubmit}
+            onChangeUser={this.handleChangeUser}
+            onChangePassword={this.handleChangePassword}
+          />
+        }
+      </div>
     )
   }
 }
 
 const mapStateToProps = (state) => {
   return {
-    error: state.user.error
+    user: state.user
   }
 };
 
