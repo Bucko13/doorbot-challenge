@@ -2,12 +2,10 @@ import React from 'react';
 import Doors from '../components/Doors'
 import { connect } from 'react-redux';
 
-class DoorsContainer extends React.Component {
-  render() {
-    return (
-      <Doors list={this.props.list}/>
-    )
-  }
+function DoorsContainer({ list }) {
+  return (
+    <Doors list={list}/>
+  )
 }
 
 const mapStateToProps = (state) => {
