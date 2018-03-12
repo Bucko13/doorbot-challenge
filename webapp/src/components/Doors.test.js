@@ -2,6 +2,7 @@ import React from 'react';
 import { shallow } from 'enzyme';
 import toJson from 'enzyme-to-json';
 import Doors from './Doors';
+import { sel } from '../helpers/testHelpers';
 
 describe('Doors Component', () => {
   it('starts with no doors to display', () => {
@@ -58,8 +59,4 @@ function generateDoor(props = {}) {
   }
 
   return shallow(<Doors {...propsToUse} />);
-}
-
-function sel(id) {
-  return `[data-test="${id}"]`;
 }
