@@ -28,4 +28,5 @@ class ResetPasswordContainer extends React.Component {
   }
 }
 
+export { ResetPasswordContainer as Component };
 export default ResetPasswordContainer;
