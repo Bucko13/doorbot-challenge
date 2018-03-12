@@ -15,8 +15,10 @@ class LoginContainer extends React.Component {
 
   static propTypes = {
     user: PropTypes.shape({
+      username: PropTypes.string,
       error: PropTypes.string
-    })
+    }),
+    login: PropTypes.func.isRequired,
   }
 
   handleChangeUser = (event) => {
@@ -76,4 +78,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 }
 
+export { LoginContainer as Component };
 export default connect(mapStateToProps, mapDispatchToProps)(LoginContainer);
