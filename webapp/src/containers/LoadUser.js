@@ -8,6 +8,7 @@ class LoadUser extends React.Component {
   static propTypes = {
     isLoading: PropTypes.bool.isRequired,
     children: PropTypes.element.isRequired,
+    getCurrentUser: PropTypes.func.isRequired
   }
 
   componentDidMount() {
@@ -38,4 +39,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
+export { LoadUser as Component };
 export default connect(mapStateToProps, mapDispatchToProps)(LoadUser);
