@@ -21,6 +21,7 @@ class ResetPasswordContainer extends React.Component {
     return (
       <ResetPassword
         form={this.state.form}
+        onSubmit={() => {}}
         onChangePassword={this.handleChangePassword}
       />
     )

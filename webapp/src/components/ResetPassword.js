@@ -1,17 +1,27 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Button, Form, Header, Segment } from 'semantic-ui-react'
+import { Message, Button, Form, Header, Segment } from 'semantic-ui-react'
 
-const ResetPassword = ({ form, onChangePassword }) => {
+const ResetPassword = ({ form, onChangePassword, onSubmit, error }) => {
   return (
     <Segment size='tiny' padded='very'>
       <Header as='h1'>Please set a new password</Header>
-      <Form>
+      { error ?
+        <Message
+          data-test='error'
+          error
+          header='Failed to reset password'
+          content={error}
+        /> :
+          null
+      }
+      <Form onSubmit={onSubmit} data-test='form'>
         <Form.Field>
           <label>New Password</label>
           <input
             type='password'
             onChange={onChangePassword}
+            data-test='password'
             value={form.password}
             placeholder='Password'
           />
@@ -27,6 +37,8 @@ ResetPassword.propTypes = {
     password: PropTypes.string
   }),
   onChangePassword: PropTypes.func.isRequired,
+  onSubmit: PropTypes.func.isRequired,
+  error: PropTypes.string,
 };
 
 export default ResetPassword;
