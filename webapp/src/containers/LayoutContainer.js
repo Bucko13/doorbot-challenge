@@ -30,4 +30,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
+export { LayoutContainer as Component };
 export default connect(mapStateProps, mapDispatchToProps)(LayoutContainer);
