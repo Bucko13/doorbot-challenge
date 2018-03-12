@@ -16,7 +16,7 @@ class DoorsContainer extends React.Component {
     return (
       <div>
         { isLoading ?
-          <Loader active>Loading...</Loader> :
+          <Loader active data-test='loader'>Loading...</Loader> :
           <div>
             <Doors list={list} onOpen={this.props.openDoor} />
           </div>
@@ -46,4 +46,5 @@ const mapDispatchToProps = (dispatch) => {
   }
 };
 
+export { DoorsContainer as Component };
 export default connect(mapStateToProps, mapDispatchToProps)(DoorsContainer);
