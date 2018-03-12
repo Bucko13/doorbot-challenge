@@ -10,18 +10,18 @@ function Layout({ onLogout, children, isLoggedIn }) {
           <Grid.Column width={16}>
             <Menu fixed='top' inverted>
               { isLoggedIn ?
-                <Container>
+                <Container data-test='logged-in-header'>
                   <Menu.Item as='p' header>
                     Doorbot
                   </Menu.Item>
                   <Menu.Item as='a' active>Doors</Menu.Item>
                   <Menu.Item as='a' position='right' onClick={onLogout}>Logout</Menu.Item> :
                 </Container> :
-                <Container>
+                <Container data-test='logged-out-header'>
                   <Menu.Item as='p' header>
                     Doorbot
                   </Menu.Item>
-                  <Menu.Item as='a' position='right' active>Login</Menu.Item>
+                  <Menu.Item as='a' position='right' active data='login-menu'>Login</Menu.Item>
                 </Container>
               }
             </Menu>
