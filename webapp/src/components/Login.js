@@ -14,17 +14,19 @@ const Login = ({ form, onChangeUser, onChangePassword, onSubmit, error }) => (
       </Header>
       { error ?
         <Message
+          data-test='error'
           error
           header='Login failed'
           content={error}
         /> :
           null
       }
-      <Form size='large' onSubmit={onSubmit}>
+      <Form size='large' onSubmit={onSubmit} data-test='form'>
         <Segment stacked>
           <Form.Input
             fluid
             onChange={onChangeUser}
+            data-test='username'
             value={form.username}
             icon='user'
             required
@@ -34,6 +36,7 @@ const Login = ({ form, onChangeUser, onChangePassword, onSubmit, error }) => (
           <Form.Input
             fluid
             onChange={onChangePassword}
+            data-test='password'
             value={form.password}
             icon='lock'
             required
