@@ -10,6 +10,7 @@ module.exports = function(app) {
 	app.delete("/auth", logout);
 	app.   get("/users", index);
 	app.  post("/users", create);
+	app.   get("/users/me", current_user);
 	app.   get("/users/:username", read);
 	app. patch("/users/:username", update);
 	app.delete("/users/:username", del_user);
@@ -53,7 +54,9 @@ async function auth(request, response) {
 			return response.end();
 		}
 	}
+	response.setHeader('content-type', 'application/json');
 	response.writeHead(401);
+	response.write(JSON.stringify({ error: "Username or password are incorrect"}));
 	return response.end();
 }
 
@@ -162,6 +165,19 @@ async function read(request, response) {
 		requires_reset: !user.pw_salt,
 	}));
 	response.end();
+}
+
+async function current_user(request, response) {
+	let user = await helpers.check_cookie(request, response);
+	response.writeHead(200);
+	response.write(JSON.stringify({
+		id: user.id,
+		doors: user.doors,
+		admin: !!user.admin,
+		username: user.username,
+		requires_reset: !user.pw_salt,
+	}));
+	return response.end();
 }
 
 async function update(request, response) {

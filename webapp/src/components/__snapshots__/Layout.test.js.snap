@@ -1,0 +1,1369 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Layout Component displays the logged in header 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Layout
+    isLoggedIn={true}
+    onLogout={[Function]}
+>
+    <p>
+        Content
+    </p>
+</Layout>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Grid
+        stackable={true}
+>
+        <GridRow>
+                <GridColumn
+                        width={16}
+                >
+                        <Menu
+                                fixed="top"
+                                inverted={true}
+                        >
+                                <Container
+                                        data-test="logged-in-header"
+                                >
+                                        <MenuItem
+                                                as="p"
+                                                header={true}
+                                        >
+                                                Doorbot
+                                        </MenuItem>
+                                        <MenuItem
+                                                active={true}
+                                                as="a"
+                                        >
+                                                Doors
+                                        </MenuItem>
+                                        <MenuItem
+                                                as="a"
+                                                onClick={[Function]}
+                                                position="right"
+                                        >
+                                                Logout
+                                        </MenuItem>
+                                         :
+                                </Container>
+                        </Menu>
+                </GridColumn>
+                <GridColumn
+                        style={
+                                Object {
+                                        "marginTop": "70px",
+                                      }
+                        }
+                        width={16}
+                >
+                        <p>
+                                Content
+                        </p>
+                </GridColumn>
+        </GridRow>
+</Grid>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <GridRow>
+          <GridColumn
+                    width={16}
+          >
+                    <Menu
+                              fixed="top"
+                              inverted={true}
+                    >
+                              <Container
+                                        data-test="logged-in-header"
+                              >
+                                        <MenuItem
+                                                  as="p"
+                                                  header={true}
+                                        >
+                                                  Doorbot
+                                        </MenuItem>
+                                        <MenuItem
+                                                  active={true}
+                                                  as="a"
+                                        >
+                                                  Doors
+                                        </MenuItem>
+                                        <MenuItem
+                                                  as="a"
+                                                  onClick={[Function]}
+                                                  position="right"
+                                        >
+                                                  Logout
+                                        </MenuItem>
+                                         :
+                              </Container>
+                    </Menu>
+          </GridColumn>
+          <GridColumn
+                    style={
+                              Object {
+                                        "marginTop": "70px",
+                                      }
+                    }
+                    width={16}
+          >
+                    <p>
+                              Content
+                    </p>
+          </GridColumn>
+</GridRow>,
+        "stackable": true,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <GridColumn
+              width={16}
+>
+              <Menu
+                            fixed="top"
+                            inverted={true}
+              >
+                            <Container
+                                          data-test="logged-in-header"
+                            >
+                                          <MenuItem
+                                                        as="p"
+                                                        header={true}
+                                          >
+                                                        Doorbot
+                                          </MenuItem>
+                                          <MenuItem
+                                                        active={true}
+                                                        as="a"
+                                          >
+                                                        Doors
+                                          </MenuItem>
+                                          <MenuItem
+                                                        as="a"
+                                                        onClick={[Function]}
+                                                        position="right"
+                                          >
+                                                        Logout
+                                          </MenuItem>
+                                           :
+                            </Container>
+              </Menu>
+</GridColumn>,
+            <GridColumn
+              style={
+                            Object {
+                                          "marginTop": "70px",
+                                        }
+              }
+              width={16}
+>
+              <p>
+                            Content
+              </p>
+</GridColumn>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Menu
+                fixed="top"
+                inverted={true}
+>
+                <Container
+                                data-test="logged-in-header"
+                >
+                                <MenuItem
+                                                as="p"
+                                                header={true}
+                                >
+                                                Doorbot
+                                </MenuItem>
+                                <MenuItem
+                                                active={true}
+                                                as="a"
+                                >
+                                                Doors
+                                </MenuItem>
+                                <MenuItem
+                                                as="a"
+                                                onClick={[Function]}
+                                                position="right"
+                                >
+                                                Logout
+                                </MenuItem>
+                                 :
+                </Container>
+</Menu>,
+              "width": 16,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Container
+                  data-test="logged-in-header"
+>
+                  <MenuItem
+                                    as="p"
+                                    header={true}
+                  >
+                                    Doorbot
+                  </MenuItem>
+                  <MenuItem
+                                    active={true}
+                                    as="a"
+                  >
+                                    Doors
+                  </MenuItem>
+                  <MenuItem
+                                    as="a"
+                                    onClick={[Function]}
+                                    position="right"
+                  >
+                                    Logout
+                  </MenuItem>
+                   :
+</Container>,
+                "fixed": "top",
+                "inverted": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <MenuItem
+                      as="p"
+                      header={true}
+>
+                      Doorbot
+</MenuItem>,
+                    <MenuItem
+                      active={true}
+                      as="a"
+>
+                      Doors
+</MenuItem>,
+                    <MenuItem
+                      as="a"
+                      onClick={[Function]}
+                      position="right"
+>
+                      Logout
+</MenuItem>,
+                    " :",
+                  ],
+                  "data-test": "logged-in-header",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "p",
+                      "children": "Doorbot",
+                      "header": true,
+                    },
+                    "ref": null,
+                    "rendered": "Doorbot",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "active": true,
+                      "as": "a",
+                      "children": "Doors",
+                    },
+                    "ref": null,
+                    "rendered": "Doors",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "a",
+                      "children": "Logout",
+                      "onClick": [Function],
+                      "position": "right",
+                    },
+                    "ref": null,
+                    "rendered": "Logout",
+                    "type": [Function],
+                  },
+                  " :",
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <p>
+                Content
+</p>,
+              "style": Object {
+                "marginTop": "70px",
+              },
+              "width": 16,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Content",
+              },
+              "ref": null,
+              "rendered": "Content",
+              "type": "p",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Grid
+          stackable={true}
+>
+          <GridRow>
+                    <GridColumn
+                              width={16}
+                    >
+                              <Menu
+                                        fixed="top"
+                                        inverted={true}
+                              >
+                                        <Container
+                                                  data-test="logged-in-header"
+                                        >
+                                                  <MenuItem
+                                                            as="p"
+                                                            header={true}
+                                                  >
+                                                            Doorbot
+                                                  </MenuItem>
+                                                  <MenuItem
+                                                            active={true}
+                                                            as="a"
+                                                  >
+                                                            Doors
+                                                  </MenuItem>
+                                                  <MenuItem
+                                                            as="a"
+                                                            onClick={[Function]}
+                                                            position="right"
+                                                  >
+                                                            Logout
+                                                  </MenuItem>
+                                                   :
+                                        </Container>
+                              </Menu>
+                    </GridColumn>
+                    <GridColumn
+                              style={
+                                        Object {
+                                                  "marginTop": "70px",
+                                                }
+                              }
+                              width={16}
+                    >
+                              <p>
+                                        Content
+                              </p>
+                    </GridColumn>
+          </GridRow>
+</Grid>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <GridRow>
+            <GridColumn
+                        width={16}
+            >
+                        <Menu
+                                    fixed="top"
+                                    inverted={true}
+                        >
+                                    <Container
+                                                data-test="logged-in-header"
+                                    >
+                                                <MenuItem
+                                                            as="p"
+                                                            header={true}
+                                                >
+                                                            Doorbot
+                                                </MenuItem>
+                                                <MenuItem
+                                                            active={true}
+                                                            as="a"
+                                                >
+                                                            Doors
+                                                </MenuItem>
+                                                <MenuItem
+                                                            as="a"
+                                                            onClick={[Function]}
+                                                            position="right"
+                                                >
+                                                            Logout
+                                                </MenuItem>
+                                                 :
+                                    </Container>
+                        </Menu>
+            </GridColumn>
+            <GridColumn
+                        style={
+                                    Object {
+                                                "marginTop": "70px",
+                                              }
+                        }
+                        width={16}
+            >
+                        <p>
+                                    Content
+                        </p>
+            </GridColumn>
+</GridRow>,
+          "stackable": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <GridColumn
+                width={16}
+>
+                <Menu
+                                fixed="top"
+                                inverted={true}
+                >
+                                <Container
+                                                data-test="logged-in-header"
+                                >
+                                                <MenuItem
+                                                                as="p"
+                                                                header={true}
+                                                >
+                                                                Doorbot
+                                                </MenuItem>
+                                                <MenuItem
+                                                                active={true}
+                                                                as="a"
+                                                >
+                                                                Doors
+                                                </MenuItem>
+                                                <MenuItem
+                                                                as="a"
+                                                                onClick={[Function]}
+                                                                position="right"
+                                                >
+                                                                Logout
+                                                </MenuItem>
+                                                 :
+                                </Container>
+                </Menu>
+</GridColumn>,
+              <GridColumn
+                style={
+                                Object {
+                                                "marginTop": "70px",
+                                              }
+                }
+                width={16}
+>
+                <p>
+                                Content
+                </p>
+</GridColumn>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Menu
+                  fixed="top"
+                  inverted={true}
+>
+                  <Container
+                                    data-test="logged-in-header"
+                  >
+                                    <MenuItem
+                                                      as="p"
+                                                      header={true}
+                                    >
+                                                      Doorbot
+                                    </MenuItem>
+                                    <MenuItem
+                                                      active={true}
+                                                      as="a"
+                                    >
+                                                      Doors
+                                    </MenuItem>
+                                    <MenuItem
+                                                      as="a"
+                                                      onClick={[Function]}
+                                                      position="right"
+                                    >
+                                                      Logout
+                                    </MenuItem>
+                                     :
+                  </Container>
+</Menu>,
+                "width": 16,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Container
+                    data-test="logged-in-header"
+>
+                    <MenuItem
+                                        as="p"
+                                        header={true}
+                    >
+                                        Doorbot
+                    </MenuItem>
+                    <MenuItem
+                                        active={true}
+                                        as="a"
+                    >
+                                        Doors
+                    </MenuItem>
+                    <MenuItem
+                                        as="a"
+                                        onClick={[Function]}
+                                        position="right"
+                    >
+                                        Logout
+                    </MenuItem>
+                     :
+</Container>,
+                  "fixed": "top",
+                  "inverted": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <MenuItem
+                        as="p"
+                        header={true}
+>
+                        Doorbot
+</MenuItem>,
+                      <MenuItem
+                        active={true}
+                        as="a"
+>
+                        Doors
+</MenuItem>,
+                      <MenuItem
+                        as="a"
+                        onClick={[Function]}
+                        position="right"
+>
+                        Logout
+</MenuItem>,
+                      " :",
+                    ],
+                    "data-test": "logged-in-header",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "p",
+                        "children": "Doorbot",
+                        "header": true,
+                      },
+                      "ref": null,
+                      "rendered": "Doorbot",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "active": true,
+                        "as": "a",
+                        "children": "Doors",
+                      },
+                      "ref": null,
+                      "rendered": "Doors",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "a",
+                        "children": "Logout",
+                        "onClick": [Function],
+                        "position": "right",
+                      },
+                      "ref": null,
+                      "rendered": "Logout",
+                      "type": [Function],
+                    },
+                    " :",
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <p>
+                  Content
+</p>,
+                "style": Object {
+                  "marginTop": "70px",
+                },
+                "width": 16,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Content",
+                },
+                "ref": null,
+                "rendered": "Content",
+                "type": "p",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;
+
+exports[`Layout Component displays the logged out header by default 1`] = `
+ShallowWrapper {
+  "length": 1,
+  Symbol(enzyme.__root__): [Circular],
+  Symbol(enzyme.__unrendered__): <Layout
+    isLoggedIn={false}
+    onLogout={[Function]}
+>
+    <p>
+        Content
+    </p>
+</Layout>,
+  Symbol(enzyme.__renderer__): Object {
+    "batchedUpdates": [Function],
+    "getNode": [Function],
+    "render": [Function],
+    "simulateEvent": [Function],
+    "unmount": [Function],
+  },
+  Symbol(enzyme.__node__): Object {
+    "instance": null,
+    "key": undefined,
+    "nodeType": "function",
+    "props": Object {
+      "children": <Grid
+        stackable={true}
+>
+        <GridRow>
+                <GridColumn
+                        width={16}
+                >
+                        <Menu
+                                fixed="top"
+                                inverted={true}
+                        >
+                                <Container
+                                        data-test="logged-out-header"
+                                >
+                                        <MenuItem
+                                                as="p"
+                                                header={true}
+                                        >
+                                                Doorbot
+                                        </MenuItem>
+                                        <MenuItem
+                                                active={true}
+                                                as="a"
+                                                data="login-menu"
+                                                position="right"
+                                        >
+                                                Login
+                                        </MenuItem>
+                                </Container>
+                        </Menu>
+                </GridColumn>
+                <GridColumn
+                        style={
+                                Object {
+                                        "marginTop": "70px",
+                                      }
+                        }
+                        width={16}
+                >
+                        <p>
+                                Content
+                        </p>
+                </GridColumn>
+        </GridRow>
+</Grid>,
+    },
+    "ref": null,
+    "rendered": Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <GridRow>
+          <GridColumn
+                    width={16}
+          >
+                    <Menu
+                              fixed="top"
+                              inverted={true}
+                    >
+                              <Container
+                                        data-test="logged-out-header"
+                              >
+                                        <MenuItem
+                                                  as="p"
+                                                  header={true}
+                                        >
+                                                  Doorbot
+                                        </MenuItem>
+                                        <MenuItem
+                                                  active={true}
+                                                  as="a"
+                                                  data="login-menu"
+                                                  position="right"
+                                        >
+                                                  Login
+                                        </MenuItem>
+                              </Container>
+                    </Menu>
+          </GridColumn>
+          <GridColumn
+                    style={
+                              Object {
+                                        "marginTop": "70px",
+                                      }
+                    }
+                    width={16}
+          >
+                    <p>
+                              Content
+                    </p>
+          </GridColumn>
+</GridRow>,
+        "stackable": true,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": Array [
+            <GridColumn
+              width={16}
+>
+              <Menu
+                            fixed="top"
+                            inverted={true}
+              >
+                            <Container
+                                          data-test="logged-out-header"
+                            >
+                                          <MenuItem
+                                                        as="p"
+                                                        header={true}
+                                          >
+                                                        Doorbot
+                                          </MenuItem>
+                                          <MenuItem
+                                                        active={true}
+                                                        as="a"
+                                                        data="login-menu"
+                                                        position="right"
+                                          >
+                                                        Login
+                                          </MenuItem>
+                            </Container>
+              </Menu>
+</GridColumn>,
+            <GridColumn
+              style={
+                            Object {
+                                          "marginTop": "70px",
+                                        }
+              }
+              width={16}
+>
+              <p>
+                            Content
+              </p>
+</GridColumn>,
+          ],
+        },
+        "ref": null,
+        "rendered": Array [
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <Menu
+                fixed="top"
+                inverted={true}
+>
+                <Container
+                                data-test="logged-out-header"
+                >
+                                <MenuItem
+                                                as="p"
+                                                header={true}
+                                >
+                                                Doorbot
+                                </MenuItem>
+                                <MenuItem
+                                                active={true}
+                                                as="a"
+                                                data="login-menu"
+                                                position="right"
+                                >
+                                                Login
+                                </MenuItem>
+                </Container>
+</Menu>,
+              "width": 16,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "class",
+              "props": Object {
+                "children": <Container
+                  data-test="logged-out-header"
+>
+                  <MenuItem
+                                    as="p"
+                                    header={true}
+                  >
+                                    Doorbot
+                  </MenuItem>
+                  <MenuItem
+                                    active={true}
+                                    as="a"
+                                    data="login-menu"
+                                    position="right"
+                  >
+                                    Login
+                  </MenuItem>
+</Container>,
+                "fixed": "top",
+                "inverted": true,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "function",
+                "props": Object {
+                  "children": Array [
+                    <MenuItem
+                      as="p"
+                      header={true}
+>
+                      Doorbot
+</MenuItem>,
+                    <MenuItem
+                      active={true}
+                      as="a"
+                      data="login-menu"
+                      position="right"
+>
+                      Login
+</MenuItem>,
+                  ],
+                  "data-test": "logged-out-header",
+                },
+                "ref": null,
+                "rendered": Array [
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "as": "p",
+                      "children": "Doorbot",
+                      "header": true,
+                    },
+                    "ref": null,
+                    "rendered": "Doorbot",
+                    "type": [Function],
+                  },
+                  Object {
+                    "instance": null,
+                    "key": undefined,
+                    "nodeType": "class",
+                    "props": Object {
+                      "active": true,
+                      "as": "a",
+                      "children": "Login",
+                      "data": "login-menu",
+                      "position": "right",
+                    },
+                    "ref": null,
+                    "rendered": "Login",
+                    "type": [Function],
+                  },
+                ],
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            "type": [Function],
+          },
+          Object {
+            "instance": null,
+            "key": undefined,
+            "nodeType": "function",
+            "props": Object {
+              "children": <p>
+                Content
+</p>,
+              "style": Object {
+                "marginTop": "70px",
+              },
+              "width": 16,
+            },
+            "ref": null,
+            "rendered": Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "host",
+              "props": Object {
+                "children": "Content",
+              },
+              "ref": null,
+              "rendered": "Content",
+              "type": "p",
+            },
+            "type": [Function],
+          },
+        ],
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+    "type": [Function],
+  },
+  Symbol(enzyme.__nodes__): Array [
+    Object {
+      "instance": null,
+      "key": undefined,
+      "nodeType": "function",
+      "props": Object {
+        "children": <Grid
+          stackable={true}
+>
+          <GridRow>
+                    <GridColumn
+                              width={16}
+                    >
+                              <Menu
+                                        fixed="top"
+                                        inverted={true}
+                              >
+                                        <Container
+                                                  data-test="logged-out-header"
+                                        >
+                                                  <MenuItem
+                                                            as="p"
+                                                            header={true}
+                                                  >
+                                                            Doorbot
+                                                  </MenuItem>
+                                                  <MenuItem
+                                                            active={true}
+                                                            as="a"
+                                                            data="login-menu"
+                                                            position="right"
+                                                  >
+                                                            Login
+                                                  </MenuItem>
+                                        </Container>
+                              </Menu>
+                    </GridColumn>
+                    <GridColumn
+                              style={
+                                        Object {
+                                                  "marginTop": "70px",
+                                                }
+                              }
+                              width={16}
+                    >
+                              <p>
+                                        Content
+                              </p>
+                    </GridColumn>
+          </GridRow>
+</Grid>,
+      },
+      "ref": null,
+      "rendered": Object {
+        "instance": null,
+        "key": undefined,
+        "nodeType": "function",
+        "props": Object {
+          "children": <GridRow>
+            <GridColumn
+                        width={16}
+            >
+                        <Menu
+                                    fixed="top"
+                                    inverted={true}
+                        >
+                                    <Container
+                                                data-test="logged-out-header"
+                                    >
+                                                <MenuItem
+                                                            as="p"
+                                                            header={true}
+                                                >
+                                                            Doorbot
+                                                </MenuItem>
+                                                <MenuItem
+                                                            active={true}
+                                                            as="a"
+                                                            data="login-menu"
+                                                            position="right"
+                                                >
+                                                            Login
+                                                </MenuItem>
+                                    </Container>
+                        </Menu>
+            </GridColumn>
+            <GridColumn
+                        style={
+                                    Object {
+                                                "marginTop": "70px",
+                                              }
+                        }
+                        width={16}
+            >
+                        <p>
+                                    Content
+                        </p>
+            </GridColumn>
+</GridRow>,
+          "stackable": true,
+        },
+        "ref": null,
+        "rendered": Object {
+          "instance": null,
+          "key": undefined,
+          "nodeType": "function",
+          "props": Object {
+            "children": Array [
+              <GridColumn
+                width={16}
+>
+                <Menu
+                                fixed="top"
+                                inverted={true}
+                >
+                                <Container
+                                                data-test="logged-out-header"
+                                >
+                                                <MenuItem
+                                                                as="p"
+                                                                header={true}
+                                                >
+                                                                Doorbot
+                                                </MenuItem>
+                                                <MenuItem
+                                                                active={true}
+                                                                as="a"
+                                                                data="login-menu"
+                                                                position="right"
+                                                >
+                                                                Login
+                                                </MenuItem>
+                                </Container>
+                </Menu>
+</GridColumn>,
+              <GridColumn
+                style={
+                                Object {
+                                                "marginTop": "70px",
+                                              }
+                }
+                width={16}
+>
+                <p>
+                                Content
+                </p>
+</GridColumn>,
+            ],
+          },
+          "ref": null,
+          "rendered": Array [
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <Menu
+                  fixed="top"
+                  inverted={true}
+>
+                  <Container
+                                    data-test="logged-out-header"
+                  >
+                                    <MenuItem
+                                                      as="p"
+                                                      header={true}
+                                    >
+                                                      Doorbot
+                                    </MenuItem>
+                                    <MenuItem
+                                                      active={true}
+                                                      as="a"
+                                                      data="login-menu"
+                                                      position="right"
+                                    >
+                                                      Login
+                                    </MenuItem>
+                  </Container>
+</Menu>,
+                "width": 16,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "class",
+                "props": Object {
+                  "children": <Container
+                    data-test="logged-out-header"
+>
+                    <MenuItem
+                                        as="p"
+                                        header={true}
+                    >
+                                        Doorbot
+                    </MenuItem>
+                    <MenuItem
+                                        active={true}
+                                        as="a"
+                                        data="login-menu"
+                                        position="right"
+                    >
+                                        Login
+                    </MenuItem>
+</Container>,
+                  "fixed": "top",
+                  "inverted": true,
+                },
+                "ref": null,
+                "rendered": Object {
+                  "instance": null,
+                  "key": undefined,
+                  "nodeType": "function",
+                  "props": Object {
+                    "children": Array [
+                      <MenuItem
+                        as="p"
+                        header={true}
+>
+                        Doorbot
+</MenuItem>,
+                      <MenuItem
+                        active={true}
+                        as="a"
+                        data="login-menu"
+                        position="right"
+>
+                        Login
+</MenuItem>,
+                    ],
+                    "data-test": "logged-out-header",
+                  },
+                  "ref": null,
+                  "rendered": Array [
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "as": "p",
+                        "children": "Doorbot",
+                        "header": true,
+                      },
+                      "ref": null,
+                      "rendered": "Doorbot",
+                      "type": [Function],
+                    },
+                    Object {
+                      "instance": null,
+                      "key": undefined,
+                      "nodeType": "class",
+                      "props": Object {
+                        "active": true,
+                        "as": "a",
+                        "children": "Login",
+                        "data": "login-menu",
+                        "position": "right",
+                      },
+                      "ref": null,
+                      "rendered": "Login",
+                      "type": [Function],
+                    },
+                  ],
+                  "type": [Function],
+                },
+                "type": [Function],
+              },
+              "type": [Function],
+            },
+            Object {
+              "instance": null,
+              "key": undefined,
+              "nodeType": "function",
+              "props": Object {
+                "children": <p>
+                  Content
+</p>,
+                "style": Object {
+                  "marginTop": "70px",
+                },
+                "width": 16,
+              },
+              "ref": null,
+              "rendered": Object {
+                "instance": null,
+                "key": undefined,
+                "nodeType": "host",
+                "props": Object {
+                  "children": "Content",
+                },
+                "ref": null,
+                "rendered": "Content",
+                "type": "p",
+              },
+              "type": [Function],
+            },
+          ],
+          "type": [Function],
+        },
+        "type": [Function],
+      },
+      "type": [Function],
+    },
+  ],
+  Symbol(enzyme.__options__): Object {
+    "adapter": ReactSixteenAdapter {
+      "options": Object {
+        "enableComponentDidUpdateOnSetState": true,
+      },
+    },
+  },
+}
+`;

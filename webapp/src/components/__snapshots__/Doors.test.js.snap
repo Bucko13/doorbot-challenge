@@ -1,0 +1,59 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Doors Component displays N doors 1`] = `
+<GridColumn
+  data-test="door-1"
+  key="1"
+  width={3}
+>
+  <DimmerDimmable
+    as={[Function]}
+    blurring={true}
+    compact={true}
+    stacked={true}
+    textAlign="center"
+  >
+    <Dimmer
+      inverted={true}
+    >
+      <Header
+        as="h3"
+        data-test="door-1-opened"
+        icon={true}
+      >
+        <Icon
+          as="i"
+          name="unlock"
+        />
+        Opened!
+      </Header>
+    </Dimmer>
+    <Header
+      as="h3"
+    />
+    <Button
+      as="button"
+      color="teal"
+      data-test="door-1-button"
+      onClick={[Function]}
+      size="tiny"
+    >
+      Open
+    </Button>
+  </DimmerDimmable>
+</GridColumn>
+`;
+
+exports[`Doors Component when loaded with doors shows the door is opened 1`] = `
+<Header
+  as="h3"
+  data-test="door-2-opened"
+  icon={true}
+>
+  <Icon
+    as="i"
+    name="unlock"
+  />
+  Opened!
+</Header>
+`;
