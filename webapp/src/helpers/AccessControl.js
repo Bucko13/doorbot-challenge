@@ -2,12 +2,12 @@ import React from 'react';
 import { Redirect } from 'react-router-dom';
 import { connect } from 'react-redux';
 
-function AccessControl({ role, user, component: Component }) {
-  if (role === 'user' && user.username) {
+function AccessControl({ userRole, user, component: Component }) {
+  if (userRole === 'user' && user.username) {
     return <Component />;
   }
 
-  if (role === 'admin' && user.admin) {
+  if (userRole === 'admin' && user.admin) {
     return <Component />;
   }
 
@@ -24,12 +24,12 @@ const ConnectedAccessControl = connect(mapStateToProps)(AccessControl);
 
 export function ifLoggedIn(Component) {
   return (
-    () => <ConnectedAccessControl role={'user'} component={Component}/>
+    () => <ConnectedAccessControl userRole={'user'} component={Component}/>
   );
 }
 
 export function ifAdmin(Component) {
   return (
-    () => <ConnectedAccessControl role={'admin'} component={Component}/>
+    () => <ConnectedAccessControl userRole={'admin'} component={Component}/>
   )
 }

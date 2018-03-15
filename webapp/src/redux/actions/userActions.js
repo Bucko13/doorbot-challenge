@@ -5,10 +5,8 @@ import {
 } from '../../services/api/userApi';
 
 import {
-  LOGIN,
   LOGIN_SUCCEEDED,
   LOGIN_FAILED,
-  LOGOUT,
   LOGOUT_SUCCEEDED,
   LOGOUT_FAILED,
   GET_CURRENT_USER_SUCCEEDED,
