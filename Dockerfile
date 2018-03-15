@@ -28,7 +28,6 @@ COPY lib /usr/src/app/lib
 COPY door.js /usr/src/app/
 COPY server.js /usr/src/app/
 COPY webpack.config.js /usr/src/app/
-COPY dist/index.html /usr/src/app/dist
 COPY migrations /usr/src/app/migrations
 
 # Build
